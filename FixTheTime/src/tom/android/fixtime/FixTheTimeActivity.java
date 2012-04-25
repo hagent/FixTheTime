@@ -27,8 +27,18 @@ public class FixTheTimeActivity extends ListActivity {
 				android.R.layout.simple_list_item_1, values);
 		setListAdapter(adapter);
 	}
+	
+	public void onAddClick(View view) {
+		@SuppressWarnings("unchecked")
+		ArrayAdapter<Date> adapter = (ArrayAdapter<Date>) getListAdapter();
+		Date date = new Date();
+		datasource.createTime(date);
+		
+		adapter.add(date);
+		adapter.notifyDataSetChanged();
+	}
 
-	public void onClick(View view) {
+	public void onRemoveClick(View view) {
 		@SuppressWarnings("unchecked")
 		ArrayAdapter<Date> adapter = (ArrayAdapter<Date>) getListAdapter();
 		Date comment = null;
