@@ -3,8 +3,6 @@ package tom.android.fixtime;
 import java.util.Date;
 import java.util.List;
 
-import tom.android.fixmoment.R;
-
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -39,25 +37,7 @@ public class FixTheTimeActivity extends ListActivity {
 	}
 
 	public void onRemoveClick(View view) {
-		@SuppressWarnings("unchecked")
-		ArrayAdapter<Date> adapter = (ArrayAdapter<Date>) getListAdapter();
-		Date comment = null;
-		switch (view.getId()) {
-		case R.id.add:
-//			String[] comments = new String[] { "Cool", "Very nice", "Hate it" };
-//			int nextInt = new Random().nextInt(3);
-//			comment = datasource.createComment(comments[nextInt]);
-//			adapter.add(comment);
-			break;
-		case R.id.delete:
-//			if (getListAdapter().getCount() > 0) {
-//				comment = (Comment) getListAdapter().getItem(0);
-//				datasource.deleteComment(comment);
-//				adapter.remove(comment);
-//			}
-			break;
-		}
-		adapter.notifyDataSetChanged();
+
 	}
 
 	@Override
